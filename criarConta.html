@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Acessar Conta</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <section class="menus">
+        <form id="criarConta" class="menus">
+            <div>
+                <!--  NAO ESQUECER REQUIRED NOS INPUTS  -->
+                <label for="nome">Digite seu nome completo: </label>
+                <input id="nome" type="text">
+            </div>
+            <div>
+                <label for="cpf">Digite seu CPF (somente números!): </label>
+                <input id="cpf" maxlength="11" type="text">
+            </div>
+            <div>
+                <label for="dataNascimento">Digite sua data de nascimento: </label>
+                <input id="dataNascimento" type="date">
+            </div>
+            <div>
+                <p for="">Selecione o tipo de conta</p>
+                <label for="contaCorrente">Conta Corrente</label>
+                <input type="radio" id="contaCorrente" name="tipoConta" value="contaCorrente">
+
+                <label for="contaPoupanca">Conta Poupanca</label>
+                <input type="radio" id="contaPoupanca" name="tipoConta" value="contaPoupanca">
+            </div>
+            <div>
+                <label for="agencia">Agência</label>
+                <input type="text">
+            </div>
+            <input type="submit" value="Criar conta" id="btn-enviar"></a>
+
+        </form>
+        <a href="./index.html"><button>Sair</button></a>
+    </section>
+
+    <script src="./src/conta.js"></script>
+</body>
+
+</html>
