@@ -7,7 +7,7 @@ class Conta{
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
-        this.senha = senha
+        this.senha = senha;
         this.tipo = tipo;
         this.agencia = agencia;
         this.numeroConta = numeroConta++
@@ -38,6 +38,8 @@ criarConta.addEventListener('submit', (e) => {
     //AJUSTAR NO FINAL
     let nome = document.getElementById('nome').value;
     localStorage.setItem(`nome${numeroConta}`, nome);
+    let senha = document.getElementById('senha').value;
+    localStorage.setItem('senha', senha);
     
 
 
