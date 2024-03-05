@@ -3,10 +3,11 @@ let numeroConta = 0
 let todasContas = []
 class Conta{
 
-    constructor(nome, cpf, dataNascimento, tipo, agencia){
+    constructor(nome, cpf, dataNascimento, senha,tipo, agencia){
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
+        this.senha = senha
         this.tipo = tipo;
         this.agencia = agencia;
         this.numeroConta = numeroConta++
@@ -37,6 +38,9 @@ criarConta.addEventListener('submit', (e) => {
     //AJUSTAR NO FINAL
     let nome = document.getElementById('nome').value;
     localStorage.setItem(`nome${numeroConta}`, nome);
+    
+
+
 
     //let cpf = document.getElementById('cpf').value;
     //let dataNascimento = document.getElementById('dataNascimento').value;
