@@ -11,7 +11,23 @@ class Conta{
         this.agencia = agencia;
         this.numeroConta = numeroConta++
         this.saldo = 0;
+        this.ativo = false
     }
+
+    depositar(valor){
+        this.saldo += valor;
+    }
+
+    sacar(valor){
+        this.saldo -= valor;
+    }
+
+    verContas(){
+        todasContas.forEach((e) => {
+            console.log(e)
+        })
+    }
+
 }
 
 const criarConta =  document.getElementById('criarConta');
