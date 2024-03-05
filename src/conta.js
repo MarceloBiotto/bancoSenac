@@ -20,6 +20,8 @@ criarConta.addEventListener('submit', (e) => {
     
     //AJUSTAR NO FINAL
     let nome = document.getElementById('nome').value;
+    localStorage.setItem(`nome${numeroConta}`, nome);
+
     //let cpf = document.getElementById('cpf').value;
     //let dataNascimento = document.getElementById('dataNascimento').value;
     //let tipo = document.getElementById('tipo').value;
@@ -27,6 +29,6 @@ criarConta.addEventListener('submit', (e) => {
 
     let conta = new Conta(nome)
     todasContas[numeroConta] = conta
-
+    console.log(todasContas)
     console.log('conta de numero ', numeroConta ,' criada com sucesso!!')
 })
