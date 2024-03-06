@@ -3,7 +3,7 @@ import { arrayTodasContas } from './acessarConta.js'
 import {Conta, numeroConta} from './conta.js'
 
 console.log('sjdhglsdjglsdjl')
-let arrayTodasContas = JSON.parse(localStorage.getItem('todasContas'))
+ arrayTodasContas = JSON.parse(localStorage.getItem('todasContas'))
 console.log(arrayTodasContas)
 
 arrayTodasContas.forEach(e => {
