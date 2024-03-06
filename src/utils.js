@@ -1,16 +1,13 @@
-
-
-import  {arrayTodasContas} from './acessarConta.js'
-
+import { arrayTodasContas } from './acessarConta.js';
 
 let verSaldo = document.querySelector('#btn-verSaldo');
 verSaldo.addEventListener('click', () => {
-    arrayTodasContas.forEach(e => {        
+    let saldoTotal = "";
     
-    
-
-    verSaldo.innerHTML = ("R$",e.saldo);
-
+    arrayTodasContas.forEach(conta => {
+        saldoTotal += `R$ ${conta.saldo} <br>`;
     });
-
+    verSaldo.innerHTML = saldoTotal;
 });
+
+
