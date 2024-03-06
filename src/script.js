@@ -1,3 +1,5 @@
+let todasContas = new Array();
+
 document.addEventListener('DOMContentLoaded', function() {
 
     let menuPrincipal = document.querySelector('.menuPrincipal');
@@ -8,9 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = "./menuPrincipal.html";
     })
 
-  
-
-
-
 
 });
+
+export { todasContas }
