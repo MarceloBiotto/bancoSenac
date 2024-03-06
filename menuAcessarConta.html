@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt=br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Acessar Conta</title>
     <link rel="stylesheet" href="./src/style.css">
 </head>
+
 <body>
     <section class="menus">
 
+        <div id="infos-container">
+            <div id="infos">
+
+            </div>
+            <input id="inputInfos" type="text">
+
+            <div id="container-msg">
+                <p id="msg"></p>
+            </div>
+        </div>
+
         <ul>
             <li>
-                <button id="btn-verSaldo">Ver saldo</button>
+                <button id="btnVerSaldo">Ver saldo</button>
             </li>
             <li>
-                <button>Sacar</button>
+                <button id="btnSacar">Sacar</button>
             </li>
             <li>
-                <button>Depositar</button>
+                <button id="btnDepositar">Depositar</button>
             </li>
             <li>
-                <button>Ver Informações do Cliente</button>
+                <button id="verInfo">Ver Informações do Cliente</button>
             </li>
             <li>
-                <button>Alterar senhar</button>
+                <button id="btnAlterarSenha">Alterar senhar</button>
             </li>
             <li>
                 <button id="sair">Sair</button>
             </li>
         </ul>
     </section>
-   
+
     <script type="module" src="./src/menuAcessarConta.js"></script>
-    <script type="module" src="./src/utils.js"></script>
 
 
 
 </body>
+
 </html>

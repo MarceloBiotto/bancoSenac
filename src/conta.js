@@ -13,7 +13,7 @@ funcao getContas(totalContas){
 let numeroConta = 1
 class Conta{
 
-    constructor(nome, cpf, dataNascimento, senha,tipo, agencia){
+    constructor(nome, cpf, dataNascimento, senha, tipo, agencia){
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;

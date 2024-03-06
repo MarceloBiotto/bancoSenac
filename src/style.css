@@ -18,3 +18,9 @@ body{
 a{
     text-decoration: none;
 }
+
+#infos-container{
+    margin: 1rem;
+    padding: 3rem;
+    background-color: lightblue;
+}

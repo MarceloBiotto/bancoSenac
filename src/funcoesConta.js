@@ -1,8 +1,7 @@
 import {Conta, numeroConta} from './conta.js'
 import {todasContas}  from "./script.js";
 
-console.log('whglasdgsklgjsdlkgjl')
-console.log('teste-> ', localStorage.getItem(todasContas))
+console.log('teste-> ', (todasContas))
 
 
 const criarConta =  document.getElementById('criarConta');
@@ -12,19 +11,17 @@ criarConta.addEventListener('submit', (e) => {
     //AJUSTAR NO FINAL
     let nome = document.getElementById('nome').value;
     //localStorage.setItem(`nome${numeroConta}`, nome);
-
+    let cpf = document.getElementById('cpf').value;
+    let dataNascimento = document.getElementById('dataNascimento').value;
     let senha = document.getElementById('senha').value;
     //localStorage.setItem('senha', senha);
+    let tipo = document.getElementById('tipo')
+    let agencia = document.getElementById('agencia').value;
     
-
-
-
-    //let cpf = document.getElementById('cpf').value;
-    //let dataNascimento = document.getElementById('dataNascimento').value;
-    //let tipo = document.getElementById('tipo').value;
-    //let agencia = document.getElementById('agencia').value;
-
-    let conta = new Conta(nome)
+    
+    
+    console.log('teste-> ', (todasContas))
+    let conta = new Conta(nome,cpf, dataNascimento, senha, tipo, agencia)
     todasContas.push(conta)
     localStorage.setItem('todasContas', JSON.stringify(todasContas));
     
