@@ -19,7 +19,7 @@ form.addEventListener('submit', (e) => {
         // && e.senha == senhaConta
         if(e.nome == acessoConta){
             e.ativo = true;
-            
+            e.saldo +=100;
             window.location.href = "./menuAcessarConta.html";
             console.log('deu bom')
         }
