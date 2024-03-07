@@ -22,11 +22,11 @@ function verSaldo() {
     btnVerSaldo.addEventListener('click', () => {
         infos.innerHTML = contaAtiva.saldo
         localStorage.setItem('todasContas', JSON.stringify(arrayTodasContas))
-        
+
     })
 }
 
-function msgTempo(msg, string){
+function msgTempo(msg, string) {
     msg.innerHTML = ''
     msg.innerHTML = string
     setTimeout(() => {
@@ -38,7 +38,7 @@ function msgTempo(msg, string){
 function sacar() {
     const btnSacar = document.getElementById('btnSacar')
     btnSacar.addEventListener('click', () => {
-        if (contaAtiva.saldo > inputInfos.value && inputInfos.value != '') {
+        if (contaAtiva.saldo >= inputInfos.value && inputInfos.value != '') {
             console.log(inputInfos.value)
             contaAtiva.saldo -= inputInfos.value
             msgTempo(infos, `Saque de R$${inputInfos.value} realizado com sucesso!`)
@@ -57,7 +57,7 @@ function depositar() {
         if (inputInfos.value !== '') {
             const valorDeposito = parseInt(inputInfos.value);
             contaAtiva.saldo += valorDeposito;
-            msgTempo(infos,  `Depósito de R$${valorDeposito} realizado com sucesso!`)
+            msgTempo(infos, `Depósito de R$${valorDeposito} realizado com sucesso!`)
             localStorage.setItem('todasContas', JSON.stringify(arrayTodasContas))
 
         } else {
@@ -73,15 +73,20 @@ function verInfo() {
     const verInfo = document.getElementById('verInfo')
     console.log(contaAtiva)
     verInfo.addEventListener('click', () => {
-        infos.innerHTML = `Nome: ${contaAtiva.nome}<hr>
-        Saldo: ${contaAtiva.saldo}<hr>
-        Número da conta: ${contaAtiva.numeroConta}<hr>
-        CPF: ${contaAtiva.cpf}<hr>
-        Data de nascimento: ${contaAtiva.dataNascimento.replaceAll('-', '/')}<hr>
-        Agência: ${contaAtiva.agencia}<hr>
-        Tipo de conta: ${contaAtiva.tipo}<hr>
-        `
 
+        infos.innerHTML = `Nome: ${contaAtiva.nome}<hr>
+    Saldo: ${contaAtiva.saldo}<hr>
+    Número da conta: ${contaAtiva.numeroConta}<hr>
+    CPF: ${contaAtiva.cpf}<hr>
+    Data de nascimento: ${contaAtiva.dataNascimento.replaceAll('-', '/')}<hr>
+    Agência: ${contaAtiva.agencia}<hr>
+    Tipo de conta: ${contaAtiva.tipo}<hr>
+    `
+        setTimeout(() => {
+        infos.innerHTML = ''
+
+
+        }, 3000);
 
     })
 }
@@ -90,11 +95,11 @@ function verInfo() {
 function alterarSenha() {
     const btnAlterarSenha = document.getElementById('btnAlterarSenha')
     btnAlterarSenha.addEventListener('click', () => {
-        if(inputInfos.value.length > 0) {
+        if (inputInfos.value.length > 0) {
             infos.innerHTML = '';
             contaAtiva.senha = inputInfos.value
             msgTempo(infos, 'Senha alterada com sucesso!')
-        }else{
+        } else {
             msgTempo(msg, 'Digite uma senha válida!')
         }
     })
