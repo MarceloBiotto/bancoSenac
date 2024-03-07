@@ -1,10 +1,5 @@
-import { todasContas } from './script.js'
-import {Conta, numeroConta} from './conta.js'
-
-console.log( JSON.parse(localStorage.getItem('todasContas')));
 let arrayTodasContas = JSON.parse(localStorage.getItem('todasContas'))
 let msgEntrar = document.getElementById('msgEntrar');
-console.log(msgEntrar);
 
 function msgTempo(msg, string){
     msg.innerHTML = ''
@@ -28,11 +23,8 @@ form.addEventListener('submit', (e) => {
         }else{
             msgTempo(msgEntrar, 'Verifique o Nome e Senha e tente novamente')
         }
-
     });
     
-    
-    let contaAtiva = arrayTodasContas.filter((conta) => {return conta.ativo == true })[0]
     localStorage.setItem('todasContas', JSON.stringify(arrayTodasContas))
 });
 
