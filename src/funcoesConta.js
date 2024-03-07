@@ -1,10 +1,18 @@
 import { Conta } from './conta.js'
 import { todasContas } from "./script.js";
 
+<<<<<<< HEAD
+console.log('teste-> ', (todasContas))
+let btnSair = document.querySelector('#btn-sair');
+btnSair.addEventListener('click', ()=>{
+    window.location=   "./menuPrincipal.html";
+})
+=======
 let arrayTodasContas = JSON.parse(localStorage.getItem('todasContas'))
 
 console.log('teste-> >>>', (arrayTodasContas))
 
+>>>>>>> 5c2070d39c73f022818bca15728a489b7c50ceed
 
 const criarConta = document.getElementById('criarConta');
 criarConta.addEventListener('submit', (e) => {
