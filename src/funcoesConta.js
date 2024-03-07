@@ -2,7 +2,10 @@ import {Conta, numeroConta} from './conta.js'
 import {todasContas}  from "./script.js";
 
 console.log('teste-> ', (todasContas))
-
+let btnSair = document.querySelector('#btn-sair');
+btnSair.addEventListener('click', ()=>{
+    window.location=   "./menuPrincipal.html";
+})
 
 const criarConta =  document.getElementById('criarConta');
 criarConta.addEventListener('submit', (e) => {
