@@ -1,14 +1,10 @@
 import { todasContas } from './script.js'
-import { Conta, numeroConta } from './conta.js'
+import { Conta } from './conta.js'
 
 let arrayTodasContas = JSON.parse(localStorage.getItem('todasContas'))
 let contaAtiva = arrayTodasContas.filter((conta) => { return conta.ativo == true })[0]
 
 console.log(arrayTodasContas)
-
-
-//CRIAR UMA FUNÇÃO PARA SALVAR OS DADOS QUANDO UTILIZAR AS FUNÇÕES
-//VERIFICAR CAMPO DE SENHA NO BANCO -> ( function alterarSenha() )
 
 
 const msg = document.getElementById('msg')

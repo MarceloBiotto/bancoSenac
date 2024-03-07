@@ -1,8 +1,11 @@
 import { Conta } from './conta.js'
-import { todasContas } from "./script.js";
 
+const btnSair = document.getElementById('btnSair')
+btnSair.addEventListener('click', () => {
+    window.location.href = "././menuPrincipal.html";
+})
 
-let arrayTodasContas = JSON.parse(localStorage.getItem('todasContas'))
+let arrayTodasContas = JSON.parse(localStorage.getItem('todasContas'))? JSON.parse(localStorage.getItem('todasContas')) : new Array();
 
 const criarConta = document.getElementById('criarConta');
 criarConta.addEventListener('submit', (e) => {
@@ -15,13 +18,13 @@ criarConta.addEventListener('submit', (e) => {
     let nomeFiltrado = arrayTodasContas.filter((conta) => {  return conta.nome == nome }  )
     if(nomeFiltrado.length > 0) {
         //não cria a conta
-        console.log('IGUAL')
         const msgCriarConta = document.getElementById('msgCriarConta')
         msgCriarConta.innerHTML = 'Nome já existente!'
+
+        //limpa o conteudo do html
         setTimeout(() => { msgCriarConta.innerHTML = '' }, 1500)
     } else {
         //cria uma nova conta
-        console.log('DIFERENTE')
         let cpf = document.getElementById('cpf').value;
         let dataNascimento = document.getElementById('dataNascimento').value;
         let tipo = document.querySelector('input[name="tipoConta"]:checked').value;
@@ -29,17 +32,12 @@ criarConta.addEventListener('submit', (e) => {
         let senha = document.getElementById('senha').value;
 
         arrayTodasContas = localStorage.getItem('todasContas') ? JSON.parse(localStorage.getItem('todasContas')) : new Array();
-        console.log('teste-> ', (arrayTodasContas))
         let conta = new Conta(nome, cpf, dataNascimento, senha, tipo, agencia)
 
         arrayTodasContas.push(conta)
         localStorage.setItem('todasContas', JSON.stringify(arrayTodasContas));
 
-        // window.location.href = "././menuPrincipal.html";
-
+        window.location.href = "././menuPrincipal.html";
     }
-
-
-
-    //console.log('conta de numero ', numeroConta ,' criada com sucesso!!')
 })
+

@@ -24,4 +24,4 @@ class Conta{
     }
 
 }
-export { Conta, numeroConta }
+export { Conta }
