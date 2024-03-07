@@ -1,8 +1,6 @@
-import  { todasContas }  from "./script.js";
-
-let totalContas = []
 
 /*
+let totalContas = []
 funcao getContas(totalContas){
     let dados = localStorage.getItem("xablau")
 
@@ -25,19 +23,5 @@ class Conta{
         this.ativo = false
     }
 
-    depositar(valor){
-        this.saldo += valor;
-    }
-
-    sacar(valor){
-        this.saldo -= valor;
-    }
-
-    verContas(){
-        todasContas.forEach((e) => {
-            console.log(e)
-        })
-    }
-
 }
-export { todasContas, Conta, numeroConta }
+export { Conta, numeroConta }

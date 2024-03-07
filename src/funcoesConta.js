@@ -12,10 +12,10 @@ criarConta.addEventListener('submit', (e) => {
 
     //filtra se o nome do input ja existe no banco
     let nome = document.getElementById('nome').value;
-    let nomeFiltrado = arrayTodasContas.filter((conta) => {  return conta.nome == nome }  )
 
-    console.log('nomeFiltrado->>>', nomeFiltrado)
-    if(nomeFiltrado) {
+    //se já existir o nome filtrado no bando, não vai criar outro
+    let nomeFiltrado = arrayTodasContas.filter((conta) => {  return conta.nome == nome }  )
+    if(nomeFiltrado.length > 0) {
         //não cria a conta
         console.log('IGUAL')
         const msgCriarConta = document.getElementById('msgCriarConta')
