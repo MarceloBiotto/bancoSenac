@@ -1,11 +1,18 @@
 import { todasContas } from './script.js'
 import {Conta, numeroConta} from './conta.js'
 
-let nomeCorretoConta = localStorage.getItem('nome');
-let senhaCorretaConta = localStorage.getItem('senha');
-
 console.log( JSON.parse(localStorage.getItem('todasContas')));
 let arrayTodasContas = JSON.parse(localStorage.getItem('todasContas'))
+let msgEntrar = document.getElementById('msgEntrar');
+console.log(msgEntrar);
+
+function msgTempo(msg, string){
+    msg.innerHTML = ''
+    msg.innerHTML = string
+    setTimeout(() => {
+        msg.innerHTML = ''
+    }, 2000);
+}
 
 let form = document.querySelector('form');
 form.addEventListener('submit', (e) => {
@@ -15,11 +22,13 @@ form.addEventListener('submit', (e) => {
     let senhaConta = document.querySelector('#password').value;
     
     arrayTodasContas.forEach(e => {
-        // && e.senha == senhaConta
-        if(e.nome == acessoConta){
+        if(e.nome == acessoConta && e.senha == senhaConta){
             e.ativo = true;
             window.location.href = "./menuAcessarConta.html";
+        }else{
+            msgTempo(msgEntrar, 'Verifique o Nome e Senha e tente novamente')
         }
+
     });
     
     

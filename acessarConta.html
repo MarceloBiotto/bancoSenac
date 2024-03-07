@@ -10,20 +10,24 @@
 
 <body>
     <section class="menus">
-        <form class="menus">
-            <div class="sub-menu">
-                <label for="text" class="form-label">Digite o nome de sua conta:</label>
-                <input type="text" class="form-control" id="nome-conta" name="nome-conta" placeholder="Nome da Conta">
+        <div>
+            <form class="menus">
+                <div class="sub-menu">
+                    <label for="text" class="form-label">Digite o nome de sua conta:</label>
+                    <input type="text" class="form-control" id="nome-conta" name="nome-conta"
+                        placeholder="Nome da Conta" required>
 
-            </div>
-            <div class="sub-menu">
-                <label for="password" class="form-label">Digite sua senha:</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
+                </div>
+                <div class="sub-menu">
+                    <label for="password" class="form-label">Digite sua senha:</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Senha" >
 
-            </div>
-            <button type="submit" id="btn-enviar">Entrar</button>
-        </form>
-        <a href="./index.html"><button> Sair</button></a>
+                </div>
+                <button type="submit" id="btn-enviar">Entrar</button>
+            </form>
+            <a href="./index.html"><button> Sair</button></a>
+        </div>
+        <p id="msgEntrar"></p>
     </section>
 
     <script type="module" src="./src/acessarConta.js"></script>
