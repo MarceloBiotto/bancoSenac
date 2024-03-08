@@ -18,27 +18,27 @@
             <form id="criarConta" class="menus">
                 <div>
                     <label for="nome">Digite seu nome completo: </label>
-                    <input id="nome" type="text" >
+                    <input id="nome" type="text" required>
                 </div>
                 <div>
                     <label for="cpf">Digite seu CPF (somente números!): </label>
-                    <input id="cpf" maxlength="11" type="text" >
+                    <input id="cpf" maxlength="11" type="text" required >
                 </div>
                 <div>
                     <label for="dataNascimento">Digite sua data de nascimento: </label>
-                    <input id="dataNascimento" type="date" max="2006-01-01" >
+                    <input id="dataNascimento" type="date" max="2006-01-01" required>
                 </div>
                 <div>
                     <p>Selecione o tipo de conta</p>
                     <label for="contaCorrente">Conta Corrente</label>
-                    <input type="radio" id="contaCorrente" name="tipoConta" value="Conta Corrente" >
+                    <input type="radio" id="contaCorrente" name="tipoConta" value="Conta Corrente" required>
 
                     <label for="contaPoupanca">Conta Poupanca</label>
                     <input type="radio" id="contaPoupanca" name="tipoConta" value="Conta Poupanca" >
                 </div>
                 <div>
                     <label for="agencia">Agência</label>
-                    <input type="text" id="agencia" >
+                    <input type="text" id="agencia" required>
                 </div>
                 <div>
                     <label for="password">Senha</label>
