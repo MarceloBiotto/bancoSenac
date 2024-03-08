@@ -1,6 +1,6 @@
 let numeroConta = 1
 class Conta{
-
+    //metodo construdor
     constructor(nome, cpf, dataNascimento, senha, tipo, agencia){
         this.nome = nome;
         this.cpf = cpf;
@@ -12,12 +12,12 @@ class Conta{
         this.saldo = 0;
         this.ativo = false
     }
-
+    // para interar automaticamente no numero da conta 
     pegarValorNumeroConta(){
         numeroConta = localStorage.getItem("numeroConta") ? localStorage.getItem("numeroConta") : 0;
 
         numeroConta++;
-
+        // setamos o numero da conta  no localStorage
         localStorage.setItem("numeroConta", numeroConta);
 
         return numeroConta;
