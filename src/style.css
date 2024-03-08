@@ -7,10 +7,20 @@ body{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
 }
 
 .menus{
+    background-color: rgba(191, 191, 240, 0.411);
+    margin: 2px;
     display: block;
+   
+
+}
+
+li{
+    list-style: none;
 }
 .menus li{
     margin:  8px;
@@ -22,6 +32,19 @@ body{
 .sub-menu{
     display: flex;
     flex-direction: column;
+}
+
+.menuPrincipal{
+    padding: 8px;
+}
+.menuPrincipal:hover{
+    font-size: 16px;
+    color: red;
+}
+
+.btn:hover{
+    color: red;
+    font-size: 17px;
 }
 a{
     text-decoration: none;
@@ -46,3 +69,5 @@ a{
     justify-content: center;
     width: auto;
 }
+
+
