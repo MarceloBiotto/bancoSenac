@@ -7,7 +7,7 @@ btnSair.addEventListener('click', () => {
 
 
 let arrayTodasContas = JSON.parse(localStorage.getItem('todasContas'))? JSON.parse(localStorage.getItem('todasContas')) : new Array();
-console.log(arrayTodasContas)
+
 
 const criarConta = document.getElementById('criarConta');
 criarConta.addEventListener('submit', (e) => {

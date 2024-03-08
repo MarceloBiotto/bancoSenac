@@ -4,7 +4,7 @@ const init = () => {
     document.addEventListener('DOMContentLoaded', function() {
 
         let menuPrincipal = document.querySelector('.menuPrincipal');
-        console.log(menuPrincipal)
+        
     
         if(menuPrincipal){
             menuPrincipal.addEventListener('click', (e)=>{

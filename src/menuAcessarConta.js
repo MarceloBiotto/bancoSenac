@@ -4,7 +4,7 @@ import { Conta, numeroConta } from './conta.js'
 let arrayTodasContas = JSON.parse(localStorage.getItem('todasContas'))
 let contaAtiva = arrayTodasContas.filter((conta) => { return conta.ativo == true })[0]
 
-console.log(arrayTodasContas)
+
 
 
 const msg = document.getElementById('msg')
@@ -35,7 +35,7 @@ function sacar() {
     const btnSacar = document.getElementById('btnSacar')
     btnSacar.addEventListener('click', () => {
         if (contaAtiva.saldo >= inputInfos.value && inputInfos.value != '') {
-            console.log(inputInfos.value)
+            
             contaAtiva.saldo -= inputInfos.value
             msgTempo(infos, `Saque de R$${inputInfos.value} realizado com sucesso!`)
             localStorage.setItem('todasContas', JSON.stringify(arrayTodasContas))
@@ -67,7 +67,7 @@ function depositar() {
 //mostra informações sobre o usuario logado
 function verInfo() {
     const verInfo = document.getElementById('verInfo')
-    console.log(contaAtiva)
+    
     verInfo.addEventListener('click', () => {
 
         infos.innerHTML = `Nome: ${contaAtiva.nome}<hr>
