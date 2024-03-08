@@ -1,5 +1,5 @@
 import { todasContas } from './script.js'
-import { Conta } from './conta.js'
+import { Conta, numeroConta } from './conta.js'
 
 let arrayTodasContas = JSON.parse(localStorage.getItem('todasContas'))
 let contaAtiva = arrayTodasContas.filter((conta) => { return conta.ativo == true })[0]

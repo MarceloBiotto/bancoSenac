@@ -1,11 +1,13 @@
-import { Conta } from './conta.js'
+import { Conta, numeroConta } from './conta.js'
 
 const btnSair = document.getElementById('btnSair')
 btnSair.addEventListener('click', () => {
     window.location.href = "././menuPrincipal.html";
 })
 
+
 let arrayTodasContas = JSON.parse(localStorage.getItem('todasContas'))? JSON.parse(localStorage.getItem('todasContas')) : new Array();
+console.log(arrayTodasContas)
 
 const criarConta = document.getElementById('criarConta');
 criarConta.addEventListener('submit', (e) => {

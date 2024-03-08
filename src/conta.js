@@ -1,13 +1,3 @@
-
-/*
-let totalContas = []
-funcao getContas(totalContas){
-    let dados = localStorage.getItem("xablau")
-
-    totalContas = dados.map((dado) => {new Conta(dado.nome, dado.cpf)})
-}
- */
-
 let numeroConta = 1
 class Conta{
 
@@ -18,10 +8,20 @@ class Conta{
         this.senha = senha;
         this.tipo = tipo;
         this.agencia = agencia;
-        this.numeroConta = numeroConta++
+        this.numeroConta = this.pegarValorNumeroConta()
         this.saldo = 0;
         this.ativo = false
     }
 
+    pegarValorNumeroConta(){
+        numeroConta = localStorage.getItem("numeroConta") ? localStorage.getItem("numeroConta") : 0;
+
+        numeroConta++;
+
+        localStorage.setItem("numeroConta", numeroConta);
+
+        return numeroConta;
+    }
+
 }
-export { Conta }
+export { Conta, numeroConta }
